@@ -7,7 +7,8 @@ defmodule EctoEmbeddedType.MixProject do
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ]
   end
 
@@ -28,6 +29,13 @@ defmodule EctoEmbeddedType.MixProject do
       {:credo, "~> 1.1", only: :dev, runtime: false},
       {:dialyxir, "1.0.0-rc.7", only: :dev, runtime: false},
       {:ex_doc, "~> 0.21.2", only: :dev, runtime: false}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "README",
+      extras: ["README.md"]
     ]
   end
 end

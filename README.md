@@ -1,6 +1,10 @@
 # EctoEmbeddedType
 
-Generates an `Ecto.Type` from an `Ecto.Schema.embedded_schema/1`.
+[![Cirrus CI](https://img.shields.io/cirrus/github/bamorim/ecto_embedded_type?style=for-the-badge&logo=cirrus-ci)](https://cirrus-ci.com/github/bamorim/ecto_embedded_type)
+[![Hex.pm](https://img.shields.io/hexpm/v/ecto_embedded_type?style=for-the-badge)](https://hex.pm/packages/ecto_embedded_type)
+
+
+`EctoEmbeddedType` generates an `Ecto.Type` from an `Ecto.Schema.embedded_schema/1`.
 
 That is useful if you want, for whatever reason, to:
 

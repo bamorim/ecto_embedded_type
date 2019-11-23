@@ -20,6 +20,27 @@ defmodule EctoEmbeddedType do
     use EctoEmbeddedType, schema: MySchema
   end
   ```
+
+  Now, wherever you can use an `Ecto.Type` you cn use your module, so if you used the first approach
+  then you can just define a field with your newly generated type:
+
+  ```
+  defmodule MyOtherSchema do
+    use Ecto.Schema
+
+    schema "table" do
+      field(:name, MySchema)
+    end
+  end
+  ```
+
+  And make sure your migration has type `:map`.
+
+  And you can even use it as primary key if you want, just use
+
+  ```
+  @primary_key {:id, MySchema, autogenerate: false}
+  ```
   """
 
   defmacro __using__(schema: schema) do

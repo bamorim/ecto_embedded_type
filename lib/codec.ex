@@ -1,8 +1,5 @@
 defmodule EctoEmbeddedType.Codec do
-  @moduledoc """
-  Encodes and decodes an embedded schema struct into a "JSON-like" structure, defined by the type
-  `t:encoded/0`.
-  """
+  @moduledoc false
 
   @type encoded_map :: %{required(String.t()) => encoded()}
   @type encoded_list :: [encoded()]
