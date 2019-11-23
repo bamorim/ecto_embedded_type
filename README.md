@@ -1,6 +1,6 @@
 # EctoEmbeddedType
 
-`EctoEmbeddedType` allow you to generate an `Ecto.Type` from an `embedded_schema`.
+Generates an `Ecto.Type` from an `Ecto.Schema.embedded_schema/1`.
 
 That is useful if you want, for whatever reason, to:
 

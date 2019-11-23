@@ -22,7 +22,12 @@ defmodule EctoEmbeddedType.MixProject do
   defp deps do
     [
       {:ecto, "~> 3.1"},
-      {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      # quality
+      {:ex_check, "~> 0.11.0", only: :dev, runtime: false},
+      {:credo, "~> 1.1", only: :dev, runtime: false},
+      {:dialyxir, "1.0.0-rc.7", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.21.2", only: :dev, runtime: false}
     ]
   end
 end
