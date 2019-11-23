@@ -8,7 +8,9 @@ defmodule EctoEmbeddedType.MixProject do
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      docs: docs()
+      docs: docs(),
+      package: package(),
+      description: "Generates Ecto.Type from embedded schemas"
     ]
   end
 
@@ -36,6 +38,16 @@ defmodule EctoEmbeddedType.MixProject do
     [
       main: "README",
       extras: ["README.md"]
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Bernardo Amorim"],
+      licenses: ["Apache-2.0"],
+      links: %{
+        "GitHub" => "https://github.com/bamorim/ecto_embedded_schema"
+      }
     ]
   end
 end
