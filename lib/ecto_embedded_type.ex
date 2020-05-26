@@ -49,8 +49,9 @@ defmodule EctoEmbeddedType do
 
       def type, do: :map
 
-      def cast(%{__struct__: unquote(schema)} = value), do: {:ok, value}
-      def cast(_), do: :error
+      def cast(value) do
+        with {:error, _} <- EctoMorph.cast_to_struct(value, unquote(schema)), do: :error
+      end
 
       def load(data) do
         EctoEmbeddedType.Codec.decode(unquote(schema), data)

@@ -4,7 +4,7 @@ defmodule EctoEmbeddedType.MixProject do
   def project do
     [
       app: :ecto_embedded_type,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -26,6 +26,7 @@ defmodule EctoEmbeddedType.MixProject do
     [
       {:ecto, "~> 3.1"},
       {:jason, "~> 1.1"},
+      {:ecto_morph, "~> 0.1.14"},
       # quality
       {:ex_check, "~> 0.11.0", only: :dev, runtime: false},
       {:credo, "~> 1.1", only: :dev, runtime: false},

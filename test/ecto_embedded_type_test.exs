@@ -38,6 +38,10 @@ defmodule EctoEmbeddedTypeTest do
       {:ok, dumped} = Schema.dump(%Schema{x: "x"})
       assert {:ok, %Schema{x: "x"}} == Schema.load(dumped)
     end
+
+    test "we can cast" do
+      assert {:ok, %Schema{x: "x"}} == Schema.cast(%{"x" => "x"})
+    end
   end
 
   describe "using with a schema argument" do
